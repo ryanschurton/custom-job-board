@@ -29,3 +29,11 @@ footer {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
+
+.navbar {
+  background-color: white;
+  border: white;
+}
+.active{
+  background-color: yellow;
+  text-decoration: underline;
