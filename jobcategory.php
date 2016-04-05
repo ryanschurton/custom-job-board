@@ -33,6 +33,8 @@
               </div>
             </div>
 
+              <input type="hidden" name="formtype" value="jobcategories">
+
             <div class="control-group">
               <label></label>
               <div class="controls">

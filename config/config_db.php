@@ -1,10 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "ry_careerboard";
-$password = "123456";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+require('connection.php');
+
 // Check connection
 if ($conn->connect_error) {
     die('Connect Error: ' . $conn->connect_error);
@@ -17,10 +14,10 @@ $sql = "CREATE DATABASE careerboard CHARACTER SET utf8 COLLATE utf8_general_ci";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
-	   	touch('error.txt');
-   		$file1 = fopen('error.txt', 'w');
-   		fwrite($file1,  $conn->error);
-   		fclose($file1);
+	   	//touch('error.txt');
+   		//$file1 = fopen('error.txt', 'w');
+   		//fwrite($file1,  $conn->error);
+   		//fclose($file1);
 }
 //End of Checking if database Exist
 
@@ -35,6 +32,14 @@ $sql_companyinfo = "CREATE TABLE Company_Information ( company_id INT(6) UNSIGNE
 
 //Create Company_Information table
 if ($conn->query($sql_companyinfo) === TRUE) {
+	
+	$companyName = ""; 
+	$companyDescription = "";
+
+	$stmt = $conn->prepare("INSERT INTO company_information (company_name, company_description) VALUES (?, ?)");
+	$stmt->bind_param("ss", $companyName, $companyDescription);
+	$stmt->execute();
+
     echo "Table Company_Information created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
@@ -72,10 +77,10 @@ $conn->select_db("careerboard");
 //Check if all Tables exist - This will be used to validate which tables to create : TODO
 $result = $conn->query("SHOW TABLES FROM careerboard");
 if($result->num_rows > 0) {
-	touch('right.txt');
-	$file = fopen('right.txt', 'w');
+	//touch('right.txt');
+	//$file = fopen('right.txt', 'w');
 	while($row = $result->fetch_assoc()) {
-		fwrite($file, $row["Tables_in_careerboard"]);
+		//fwrite($file, $row["Tables_in_careerboard"]);
         //echo "tables: " . $row["Tables_in_careerboard"] . "<br>";
     }
     fclose($file);
@@ -99,4 +104,5 @@ if($result->num_rows > 0) {
 // 	fclose($file);
 // 	//echo "Error creating table: " . $conn->error;
 // }
+
 ?>
