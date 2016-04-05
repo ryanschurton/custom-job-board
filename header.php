@@ -1,3 +1,4 @@
+<?php require_once('config/config_db.php') ?> <!-- Configure the data base  -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>

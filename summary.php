@@ -17,6 +17,7 @@
         </div>
         <div class="panel-body">
           
+            <!-- CREATE A SUMMARY OF ALL THE JOBS OFFERS, JOB TITLES and Company Information-->
 
           </div><!--/panel content-->
         </div><!--/panel-->

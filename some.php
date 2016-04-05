@@ -1,5 +1,9 @@
 <?php
 if($_POST['name']) {
+
+	//Get Post Values when form is submitted 
+	//Read to send off to Insert
+
 	parse_str($_POST['name'], $output);
 	// $params = array();
 	// parse_str($_POST, $params);

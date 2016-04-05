@@ -22,14 +22,14 @@
             <div class="control-group">
               <label>Job Category Name</label>
               <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name" name="jobcategory">
+                <input type="text" class="form-control" placeholder="Enter Name" name="jobcategory"> <!-- get data form sticky-->
               </div>
             </div>
                   
             <div class="control-group">
               <label>Job Category Description</label>
               <div class="controls">
-                <textarea class="form-control" name="jobcategorydescription"></textarea>
+                <textarea class="form-control" name="jobcategorydescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
 

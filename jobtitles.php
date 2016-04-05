@@ -23,13 +23,13 @@
             <div class="control-group">
               <label>Job Title</label>
               <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name" name="jobtitle">
+                <input type="text" class="form-control" placeholder="Enter Name" name="jobtitle"> <!-- get data form sticky-->
               </div>
             </div> 
 
             <div class="form-group">
               <label for="sel1">Job Category</label>
-                <select class="form-control" id="sel1" name="jobcategory">
+                <select class="form-control" id="sel1" name="jobcategory"> <!-- get data form sticky-->
                   <option>Marketing</option>
                   <option>Development</option>
                   <option>Sales</option>
@@ -40,7 +40,7 @@
             <div class="control-group">
               <label>Job Description</label>
               <div class="controls">
-                <textarea class="form-control" name="jobdescription"></textarea>
+                <textarea class="form-control" name="jobdescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
 

@@ -21,14 +21,14 @@
             <div class="control-group">
               <label>Company Name</label>
               <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name" name="companyname">
+                <input type="text" class="form-control" placeholder="Enter Name" name="companyname"> <!-- get data form sticky-->
               </div>
             </div> 
 
             <div class="control-group">
               <label>Company Description</label>
               <div class="controls">
-                <textarea class="form-control" name="companydescription"></textarea>
+                <textarea class="form-control" name="companydescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
 
