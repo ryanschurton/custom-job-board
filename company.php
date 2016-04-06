@@ -16,7 +16,7 @@
 
         <div class="panel-body">
           
-          <form class="form form-vertical" id="jobs" >
+          <form class="form form-vertical" id="company" >
 
             <div class="control-group">
               <label>Company Name</label>
