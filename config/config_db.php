@@ -6,7 +6,6 @@ require('connection.php');
 if ($conn->connect_error) {
     die('Connect Error: ' . $conn->connect_error);
 
-
 }
 
 //Create database - TODO: FIRST CHECK IF DATABASE exist then create it 
@@ -14,10 +13,7 @@ $sql = "CREATE DATABASE careerboard CHARACTER SET utf8 COLLATE utf8_general_ci";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
-	   	//touch('error.txt');
-   		//$file1 = fopen('error.txt', 'w');
-   		//fwrite($file1,  $conn->error);
-   		//fclose($file1);
+
 }
 //End of Checking if database Exist
 
@@ -76,33 +72,12 @@ $conn->select_db("careerboard");
 
 //Check if all Tables exist - This will be used to validate which tables to create : TODO
 $result = $conn->query("SHOW TABLES FROM careerboard");
-if($result->num_rows > 0) {
-	//touch('right.txt');
-	//$file = fopen('right.txt', 'w');
-	while($row = $result->fetch_assoc()) {
-		//fwrite($file, $row["Tables_in_careerboard"]);
-        //echo "tables: " . $row["Tables_in_careerboard"] . "<br>";
+	if($result->num_rows > 0) {
+
+		while($row = $result->fetch_assoc()) {
+
     }
-    fclose($file);
-	// touch('right.txt');
-	// $file = fopen('right.txt', 'w');
-	// file_put_contents($file, $conn->error);
-	// fwrite($file, "work");
-	// fclose($file);
+
 }
-// $conn->fetch_assoc($query);
-// if($conn->query($get_tables) === TRUE) {
-// 	touch('right.txt');
-// 	$file = fopen('right.txt', 'w');
-// 	//file_put_contents($file, $conn->error);
-// 	fwrite($file, "work");
-// 	fclose($file);
-// } else {
-// 	touch('wrg.txt');
-// 	$file = fopen('wrg.txt', 'w');
-// 	file_put_contents($file, $conn->error);
-// 	fclose($file);
-// 	//echo "Error creating table: " . $conn->error;
-// }
 
 ?>

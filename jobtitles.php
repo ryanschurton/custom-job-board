@@ -30,10 +30,10 @@
             <div class="form-group">
               <label for="sel1">Job Category</label>
                 <select class="form-control" id="sel1" name="jobcategory"> <!-- get data form sticky-->
-                  <option>Marketing</option>
-                  <option>Development</option>
-                  <option>Sales</option>
-                  <option>Design</option>
+                  <option value="1">Marketing</option>
+                  <option value="2">Development</option>
+                  <option value="3">Sales</option>
+                  <option value="4">Design</option>
                 </select>
             </div>
 
@@ -43,6 +43,8 @@
                 <textarea class="form-control" name="jobdescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
+
+            <input type="hidden" name="formtype" value="job">
 
             <div class="control-group">
               <label></label>
