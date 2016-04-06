@@ -11,7 +11,10 @@ $(document).ready(function(){
   			url: "controller/insert.ctrl.php",
   			data: { name: data }
     	})  .success(function(data) {
-         console.log( "success" );
+
+          $("input[name='jobcategory']").val("");
+          $("textarea[name='jobcategorydescription']").val("");
+
        })
       .fail(function(data) {
         console.log( "fail" );

@@ -10,10 +10,12 @@ if($_GET['stuff'] == "jobcategories"){
 	echo json_encode(get_jobcategories($conn));
 }
 
-//echo json_encode(get_company($conn));
+if($_GET['stuff'] == "company"){
+	echo json_encode(get_company($conn));
+}
 
-// echo json_encode(get_company($conn));
 
-// echo json_encode(get_company($conn));
+
+
 
 ?>

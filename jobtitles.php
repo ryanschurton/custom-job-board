@@ -1,5 +1,11 @@
 <?php require('header.php'); ?>
 
+<style>
+.active{
+    background-color:white
+}
+</style>
+
     <div class="col-sm-9">
       	
       <!-- column 2 -->	
@@ -17,6 +23,11 @@
           </div>
         </div>
         <div class="panel-body">
+
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Add</a></li>
+          <li><a href="#">Edit</a></li>
+        </ul>
           
           <form class="form form-vertical" id="jobs">
 
@@ -29,11 +40,8 @@
 
             <div class="form-group">
               <label for="sel1">Job Category</label>
-                <select class="form-control" id="sel1" name="jobcategory"> <!-- get data form sticky-->
-                  <option value="1">Marketing</option>
-                  <option value="2">Development</option>
-                  <option value="3">Sales</option>
-                  <option value="4">Design</option>
+                <select class="form-control" id="jobstype" name="jobcategory"> <!-- get data form sticky-->
+  
                 </select>
             </div>
 
@@ -71,5 +79,7 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-	</body>
+	 <script src="js/job_title.js"></script>
+  <script src="js/job_categories.js"></script>
+  </body>
 </html>

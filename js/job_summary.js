@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$.ajax({
 		type: 'GET',
-		data: {type:"summary"},
+		data: {type:"stuff"},
 		url: "controller/select.ctrl.php",
 	  	success: function(result){
 	  		console.log(result);

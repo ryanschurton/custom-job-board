@@ -11,14 +11,20 @@ function get_company($conn) {
 }
 
 function get_jobcategories($conn) {
+	$results_array;
 
 	//query to return job information
 	$conn->select_db("careerboard");
-	$sql = "SELECT 	job_category_name, job_category_description FROM job_category";
+	$sql = "SELECT 	job_category_id, job_category_name, job_category_description FROM job_category";
 	$result = $conn->query($sql);
-	return mysqli_fetch_assoc($result);
+	
+	while ($row = $result->fetch_assoc()) {
+  		$results_array[] = $row;
+	}
 
+	return $results_array;
 }
+
 
 // function get_jobtitles($conn){
 

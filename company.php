@@ -21,16 +21,19 @@
             <div class="control-group">
               <label>Company Name</label>
               <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name" name="companyname"> <!-- get data form sticky-->
+                <input type="text" id='a' class="form-control" placeholder="Enter Name" name="companyname"> <!-- get data form sticky-->
               </div>
             </div> 
 
             <div class="control-group">
               <label>Company Description</label>
               <div class="controls">
-                <textarea class="form-control" name="companydescription"></textarea> <!-- get data form sticky-->
+                <textarea class="form-control" id='b' name="companydescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
+<!-- 
+            <h1 id='a'></h1>
+            <h1 id='b'></h1> -->
 
             <div class="control-group">
               <label></label>
@@ -56,5 +59,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+    <script src="js/company.js"></script>
 	</body>
 </html>
