@@ -41,7 +41,7 @@
             <div class="form-group">
               <label for="sel1">Job Category</label>
                 <select class="form-control" id="jobstype" name="jobcategory"> <!-- get data form sticky-->
-  
+                  <option value="">Please Select a Job Category</option>
                 </select>
             </div>
 

@@ -26,14 +26,30 @@ function get_jobcategories($conn) {
 }
 
 
-// function get_jobtitles($conn){
+function get_jobtitles($conn){
 
-// 	$conn->select_db("careerboard");
-// 	$sql = "SELECT 	job_title, job_category_id, job_description FROM job_title";
-// 	$result = $conn->query($sql);
-// 	return mysqli_fetch_assoc($result);
+	 //SELECT a.job_title, a.job_category_id, a.job_description, b.job_category_name FROM job_title a LEFT JOIN job_category b ON a.job_category_id = b.job_category_id;
 
-// 	//query to return jobtitle information
-// }
+	$conn->select_db("careerboard");
+	$sql = "SELECT 	job_title, job_category_id, job_description FROM job_title";
+	$result = $conn->query($sql);
+	return mysqli_fetch_assoc($result);
+
+	//query to return jobtitle information
+}
+
+function get_jobtitleandcategory($conn) {
+
+	$conn->select_db("careerboard");
+	$sql = "SELECT a.job_title, a.job_category_id, a.job_description, b.job_category_name FROM job_title a LEFT JOIN job_category b ON a.job_category_id = b.job_category_id";
+	$result = $conn->query($sql);
+		while ($row = $result->fetch_assoc()) {
+  		$results_array[] = $row;
+	}
+
+	return $results_array;
+	
+}
+
 
 ?>

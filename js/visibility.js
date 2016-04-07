@@ -12,8 +12,15 @@ $(document).ready(function(){
   			data: { name: data }
     	})  .success(function(data) {
 
+          //Empty fields in Job Category 
           $("input[name='jobcategory']").val("");
           $("textarea[name='jobcategorydescription']").val("");
+
+          //Empty fields in Job Titles
+          $("input[name='jobtitle']").val("");
+          $("select[name='jobcategory']").val("");
+          $("textarea[name='jobdescription']").val("");
+
 
        })
       .fail(function(data) {
