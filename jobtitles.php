@@ -80,6 +80,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	 <script src="js/job_title.js"></script>
-  <script src="js/job_categories.js"></script>
+  <script src="js/jobrole.js"></script>
   </body>
 </html>

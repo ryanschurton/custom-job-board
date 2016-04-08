@@ -4,6 +4,7 @@
 .active{
     background-color:white
 }
+
 </style>
 
     <div class="col-sm-9">
@@ -13,7 +14,7 @@
             
        <hr>
       
-	   <div class="row  col-lg-12">
+	   <div class="row  col-lg-12 ">
 
       <div class="panel panel-default ">
         <div class="panel-heading">
@@ -25,8 +26,8 @@
         <div class="panel-body">
 
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#">Add</a></li>
-          <li><a href="#">Edit</a></li>
+          <li class="active"><a href="jobcategory.php">Add</a></li>
+          <li ><a href="editjobrole.php">Edit</a></li>
         </ul>
       
           <form class="form form-vertical" id="jobs">
@@ -41,7 +42,7 @@
             <div class="control-group">
               <label>Job Category Description</label>
               <div class="controls">
-                <textarea class="form-control" name="jobcategorydescription"></textarea> <!-- get data form sticky-->
+                <textarea rows="10" cols="80" class="form-control" name="jobcategorydescription"></textarea> <!-- get data form sticky-->
               </div>
             </div>
 
@@ -72,6 +73,6 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script src="js/bootstrap.min.js"></script>
-    <script src="js/job_categories.js"></script>
+    <script src="js/jobroles.js"></script>
 	</body>
 </html>
