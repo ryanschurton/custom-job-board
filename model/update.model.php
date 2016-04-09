@@ -14,4 +14,16 @@ function update_company($conn, $companyname, $companydescription) {
 	$stmt->execute();
 }
 
+//function to update job role
+function update_jobrole($conn, $roleid, $rolename, $roledesc) {
+
+	$conn->select_db("careerboard");
+
+	$stmt = $conn->prepare("UPDATE 	job_category SET job_category_name=?, job_category_description=? WHERE job_category_id=?");
+
+	$stmt->bind_param("ssi", $rolename, $roledesc, $roleid);
+
+	$stmt->execute();
+}
+
 ?>

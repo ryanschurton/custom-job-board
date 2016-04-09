@@ -16,6 +16,16 @@ require('../model/update.model.php');
 		update_company($conn, $output[0], $output[1]);
 	}
 
+	//send data to update job role
+	if($_POST['uname']){
+
+		parse_str($_POST['uname'], $output);
+		$output = array_values($output);
+
+		update_jobrole($conn, $output[0], $output[1], $output[2]);
+
+	}
+
 
 ?>
 	
