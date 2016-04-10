@@ -26,4 +26,15 @@ function update_jobrole($conn, $roleid, $rolename, $roledesc) {
 	$stmt->execute();
 }
 
+function update_jobtitle($conn, $jobid, $jobtitle, $jobdesc) {
+
+	$conn->select_db("careerboard");
+
+	$stmt = $conn->prepare("UPDATE 	job_title SET job_title=?, job_description=? WHERE job_title_id=?");
+
+	$stmt->bind_param("ssi", $jobtitle, $jobdesc, $jobid);
+
+	$stmt->execute();
+}
+
 ?>

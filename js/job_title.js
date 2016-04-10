@@ -6,8 +6,6 @@ $(document).ready(function(){
 		url: "controller/select.ctrl.php",
 	  	success: function(result){
 	  		
-	  		//var data = JSON.parse(result);
-	  		//console.log(result);
 	  	}
 	})
 });

@@ -68,22 +68,25 @@ $(document).ready(function(){
 
   });
 
+    $("#jobviews").on("click","a", function(event){
 
+    var modalId = $(this).attr("id");
+    elementId = modalId.charAt(modalId.length-1);
+  $("#jobTitleModal").on("submit", "#myModal"+elementId + " .modalForm" , function(event){
+      //event.preventDefault();
+      var data = $(this).serialize();
+      $.ajax({
+        method: "POST",
+        url: "controller/update.ctrl.php",
+        data: { jobU: data }
+      })  .success(function(data) {
+         console.log( "success" );
+       })
+      .fail(function(data) {
+        console.log( "fail" );
+      });
+  })
 
-  //$("#allModal").on("submit",".btn",function(event){
-    //event.preventDefault();
-    //console.log("aaa");
-    //console.log(".modalForm");
-    // var id = $(this).attr("id");
-    // console.log($("#"+id).siblings("h3"));
-    //console.log($(this).children("#role1"));
-    //console.log($(this).children("#role1 h3").text());
-    //var id = $(this).children().eq(2);;
-    //console.log(id);
-    //console.log($(this).children("#myModal1"));
-    //$("#allModal").modal("hide");
-
-    //location.reload();
-  //});
+  });
 
 });

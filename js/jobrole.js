@@ -20,7 +20,7 @@ $(document).ready(function(){
 					modalHTML +='<form  class="modalForm form-group">';
 					modalHTML +='<label for="formGroupExampleInput">Job Role</label>';
 					modalHTML += '<input type="hidden" name=roleid'+i+' value='+ data[i].job_category_id +'>';
-					modalHTML +='<input type="text" name=rolename'+i+' class="form-control" value='+ data[i].job_category_name +'>';
+					modalHTML +='<input type="text" name=rolename'+i+' class="form-control" value="'+ data[i].job_category_name +'"/>';
 					modalHTML += '<label for="formGroupExampleInput">Job Role Description</label>';
 					modalHTML +='<textarea class="form-control" name=roledesc'+i+' name= cols="50" rows="7">' + data[i].job_category_description  + '</textarea>';
 					modalHTML +='<div class="modal-footer">';

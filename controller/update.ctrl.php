@@ -21,9 +21,16 @@ require('../model/update.model.php');
 
 		parse_str($_POST['uname'], $output);
 		$output = array_values($output);
-
 		update_jobrole($conn, $output[0], $output[1], $output[2]);
 
+	}
+
+	if($_POST['jobU']) {
+
+		parse_str($_POST['jobU'], $output);
+		$output = array_values($output);
+		update_jobtitle($conn, $output[1], $output[2], $output[3]);
+	
 	}
 
 

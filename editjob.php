@@ -37,11 +37,11 @@
                   <option value="">Please Select a Job Category</option>
                 </select>
             </div>
-
-            <div id="jobviews"></div>
-
+            
           </form> 
 
+          <div id="jobviews" class="pre-scrollable"></div>
+          <div id="jobTitleModal"></div>
           </div><!--/panel content-->
         </div><!--/panel-->
       </div><!--/row-->
@@ -50,14 +50,19 @@
   </div><!--/row-->
 </div><!--/container-->
 
+
+
 <?php require('footer.php') ?>
 <footer class="text-center">This Bootstrap 3 dashboard layout is compliments of <a href="http://www.bootply.com/85861"><strong>Bootply.com</strong></a></footer>
   
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script>
 	 <script src="js/job_title.js"></script>
-  <script src="js/jobrole.js"></script>
   <script src="js/editjobrole.js"></script>
+  <script src="js/visibility.js"></script>
+  <script src="js/jobrole.js"></script>
   </body>
 </html>
