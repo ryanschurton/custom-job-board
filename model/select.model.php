@@ -38,6 +38,17 @@ function get_jobtitles($conn){
 	//query to return jobtitle information
 }
 
+function get_jobTitleByJobCategoryId($conn, $JobCategoryId) {
+	$conn->select_db("careerboard");
+	$sql = "SELECT 	job_title, job_category_id, job_description FROM job_title WHERE job_category_id = $JobCategoryId";
+	$result = $conn->query($sql);
+		while ($row = $result->fetch_assoc()) {
+  		$results_array[] = $row;
+	}
+
+	return $results_array;
+}
+
 function get_jobtitleandcategory($conn) {
 
 	$conn->select_db("careerboard");

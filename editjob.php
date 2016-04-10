@@ -25,18 +25,11 @@
         <div class="panel-body">
 
         <ul class="nav nav-tabs">
-          <li class="active"><a href="jobtitles.php">Add</a></li>
-          <li><a a href="editjob.php">Edit</a></li>
+          <li ><a href="jobtitles.php">Add</a></li>
+          <li class="active"><a href="editjob.php">Edit</a></li>
         </ul>
           
           <form class="form form-vertical" id="jobs">
-
-            <div class="control-group">
-              <label>Job Title</label>
-              <div class="controls">
-                <input type="text" class="form-control" placeholder="Enter Name" name="jobtitle"> <!-- get data form sticky-->
-              </div>
-            </div> 
 
             <div class="form-group">
               <label for="sel1">Job Category</label>
@@ -45,23 +38,7 @@
                 </select>
             </div>
 
-            <div class="control-group">
-              <label>Job Description</label>
-              <div class="controls">
-                <textarea class="form-control" name="jobdescription"></textarea> <!-- get data form sticky-->
-              </div>
-            </div>
-
-            <input type="hidden" name="formtype" value="job">
-
-            <div class="control-group">
-              <label></label>
-              <div class="controls">
-                <button type="submit" id="submitbtn" class="btn btn-primary">
-                  Save Changes
-                </button>
-              </div>
-            </div> 
+            <div id="jobviews"></div>
 
           </form> 
 
@@ -81,5 +58,6 @@
 		<script src="js/bootstrap.min.js"></script>
 	 <script src="js/job_title.js"></script>
   <script src="js/jobrole.js"></script>
+  <script src="js/editjobrole.js"></script>
   </body>
 </html>

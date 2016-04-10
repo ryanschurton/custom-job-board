@@ -27,6 +27,20 @@ if($_GET['stuff'] == "all") {
 	//echo $all2;
 }
 
+if($_GET['stuff'] == "getJobCategory") {
+	
+	$file = fopen("tttt.txt","w");
+	fwrite($file, $_GET['stuff']);
+	fwrite($file, $_GET['selectedRole']);
+	fclose($file);
+	
+	$all = array();
+
+	$all['jobtitles'] = array(get_jobTitleByJobCategoryId($conn, $_GET['selectedRole']));
+
+	echo json_encode($all);
+}
+
 
 
 
