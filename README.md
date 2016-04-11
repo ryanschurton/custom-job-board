@@ -1,7 +1,7 @@
 #Custom Job Board Application
 
 ##What is it?
-This application will allow you to create an open job positions within your company. With this application you can add a company name, description, name and description for each job role and the job title and job description available.
+This application will allow you to create open job positions within your company. With this application you can add a company name, description, name and description for each job role and the job title and job description available.
 
 ##Get Started
 
@@ -13,8 +13,8 @@ Simply download or clone this repository into your own project. Then navigate to
 
 to match your own configurations. 
 
-navigate to the follow page: compnay.php
+navigate to the follow page: company.php
 
-You database with all the requried tables will be created.
+Your database with all the requried tables will be created.
 
 You are now ready to add job openings within your company. 
