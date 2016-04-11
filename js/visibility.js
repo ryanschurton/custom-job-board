@@ -28,6 +28,7 @@ $(document).ready(function(){
       });
 	});
 
+//Submit function to update company information
   $("#company").submit( function(event) {
     event.preventDefault();
     //serialize the form data here
@@ -37,7 +38,7 @@ $(document).ready(function(){
       $.ajax({
         method: "POST",
         url: "controller/update.ctrl.php",
-        data: { name: data }
+        data: { name: data ,check: "company"}
       })  .success(function(data) {
          console.log( "success" );
        })
@@ -46,6 +47,7 @@ $(document).ready(function(){
       });
   });
 
+//Submit function to update job category
   $("#roledata").on("click","a", function(event){
 
     var modalId = $(this).attr("id");
@@ -57,7 +59,7 @@ $(document).ready(function(){
       $.ajax({
         method: "POST",
         url: "controller/update.ctrl.php",
-        data: { uname: data }
+        data: { name: data , check:"jobrole"}
       })  .success(function(data) {
          console.log( "success" );
        })
@@ -68,6 +70,7 @@ $(document).ready(function(){
 
   });
 
+//Submit function to update job title
     $("#jobviews").on("click","a", function(event){
 
     var modalId = $(this).attr("id");
@@ -78,7 +81,7 @@ $(document).ready(function(){
       $.ajax({
         method: "POST",
         url: "controller/update.ctrl.php",
-        data: { jobU: data }
+        data: { name: data, check: "jobtitle"}
       })  .success(function(data) {
          console.log( "success" );
        })

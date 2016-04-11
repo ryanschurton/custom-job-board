@@ -12,7 +12,6 @@ require('../model/insert.model.php');
 		// $params = array();
 		// parse_str($_POST, $params);
 
-
 		if($output[2] === 'jobcategories') {
 			insert_job_type($conn, $output[0], $output[1]);
 		}
