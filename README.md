@@ -5,11 +5,11 @@ This application will allow you to create an open job positions within your comp
 
 ##Get Started
 
-Simply download or clone this repository into your own project. Then naviage to the config folder and inside of connection.php change the following variables
+Simply download or clone this repository into your own project. Then navigate to the config folder and inside of connection.php change the following variables
 
--servername
--username
--password
+- servername
+- username
+- password
 
 to match your own configurations. 
 
