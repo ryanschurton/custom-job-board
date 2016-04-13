@@ -11,6 +11,7 @@ $(document).ready(function(){
 	  		}
 	  		
 	  		for(var i = 0; i < data.length; i++) {
+	  			//Modal to edit a job role
 	  			var modalHTML = '<div id="myModal'+(i+1)+'" class="modal fade" role="dialog"><div class="modal-dialog">';
 					modalHTML += '<div class="modal-content">';
 					modalHTML +='<div class="modal-header">';
@@ -34,8 +35,24 @@ $(document).ready(function(){
 
 			$('#allModal').append(modalHTML);
 
-	  		$("#roledata").append('<hr><a data-toggle="modal" id=role'+data[i].job_category_id+' data-target="#myModal'+data[i].job_category_id+'" type="button"><i class="fa fa-pencil-square-o "></i> Edit</a><h3>'+ data[i].job_category_name +'</h3><p>'+ data[i].job_category_description + '</p>');
+	  		$("#roledata").append('<hr><a data-toggle="modal" id=role'+data[i].job_category_id+' data-target="#myModal'+data[i].job_category_id+'" type="button"><i class="fa fa-pencil-square-o "></i> Edit</a><br><a id=dRole'+data[i].job_category_id+' data-target="#myModal'+data[i].job_category_id+'" type="button"><i class="fa fa-times" aria-hidden="true"></i> Delete</a><h3>'+ data[i].job_category_name +'</h3><p>'+ data[i].job_category_description + '</p>');
 	  		
+	  		$("#roledata").on("click", "#dRole" + i, function(){
+	  			//console.log($(this).attr('id'));
+	  			
+	  			var modalId = $(this).attr("id");
+    			elementId = modalId.charAt(modalId.length-1);
+	  			console.log(elementId);
+	  			$.ajax({
+	  				type: 'POST',
+	  				data: {delId: elementId, stuff: "removeRole"},
+	  				url: "controller/delete.ctrl.php",
+	  				success:function(result) {
+	  					console.log(result);
+	  				}
+	  			})
+	  		});
+
 	  		}
 	  		
 	  	}

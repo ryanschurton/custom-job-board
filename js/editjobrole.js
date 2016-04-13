@@ -16,10 +16,11 @@ $(document).ready(function(){
 		  			$("#jobviews").empty();
 		  			for(var i = 0; i < data.length; i++) {
 
+		  		//Modal to edit a job title
 	  			var modalHTML1 = '<div id="myModal'+(i+1)+'" class="modal fade" role="dialog"><div class="modal-dialog">';
 					modalHTML1 += '<div class="modal-content">';
 					modalHTML1 +='<div class="modal-header">';
-					modalHTML1 +='<h4 class="modal-title">Edit Job Role</h4>';
+					modalHTML1 +='<h4 class="modal-title">Edit Job Title</h4>';
 					modalHTML1 +='</div>';
 					modalHTML1 +='<div class="modal-body">';
 					modalHTML1 +='<form  class="modalForm form-group">';
