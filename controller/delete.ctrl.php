@@ -11,14 +11,15 @@ require('../model/delete.model.php');
 
 switch ($_POST['stuff']) {
 	case "removeRole":
-		if(delete_jobTitle($conn, $_POST['delId'])){
-			delete_jobRole($conn, $_POST['delId']);
+		if(delete_jobRole($conn, $_POST['delId'])){
+			delete_jobTitleBycategoryId($conn, $_POST['delId']);
 		}
 		break;
 	case "removeJob":
-		delete_jobRole($conn, $_POST['delId']);
+		echo delete_jobTitle($conn, $_POST['delId']);
+		break;
 	default:
-		echo "no match";
+		echo "no";
 		break;
 }
 

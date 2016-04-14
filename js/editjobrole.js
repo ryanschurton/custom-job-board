@@ -40,16 +40,29 @@ $(document).ready(function(){
 					modalHTML1 +='</div>';
 					
 					$('#jobTitleModal').append(modalHTML1);	  		
-		  			
-		  			var html = '<hr><a data-toggle="modal" id=role'+(i+1)+' data-target="#myModal'+(i+1)+'" type="button"><i class="fa fa-pencil-square-o "></i> Edit</a>';
-		  				html += '<br><a data-toggle="modal" id=role'+(i+1)+' data-target="#myModal'+(i+1)+'" type="button"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>';
+		  			var html = '<hr><a data-toggle="modal" id=role'+ data[i].job_title_id +' data-target="#myModal'+(i+1)+'" type="button"><i class="fa fa-pencil-square-o "></i> Edit</a>';
+		  				html += '<br><a data-toggle="modal" id=dRole'+ data[i].job_title_id +'  type="button"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>';
 		  				html += '<h4><span>Title: </span>'+data[i].job_title+'</h4>';
 		  				html += '<span style="text-decoration: underline;">Description </span><p>'+data[i].job_description+'</p>';
 					$("#jobviews").append(html);
+
+				$("#jobviews").on("click", "#dRole" + data[i].job_title_id, function(){
+	  			//console.log($(this).attr('id'));
+	  			
+	  			var modalId = $(this).attr("id");
+    			elementId = modalId.charAt(modalId.length-1);
+	  			$.ajax({
+	  				type: 'POST',
+	  				data: {delId: elementId, stuff: "removeJob"},
+	  				url: "controller/delete.ctrl.php",
+	  				success:function(result) {
+	  					console.log(result);
+	  				}
+	  			})
+	  		});
 		  		}
 		  			
 		  		} else {
-		  			console.log("nooo");
 		  			$("#jobviews").html("<p>No Jobs</p>");
 		  		}
 	  		}

@@ -11,7 +11,7 @@ function delete_jobRole($conn, $jobRoleId){
 
 }
 
-function delete_jobTitle($conn, $jobRoleId){
+function delete_jobTitleBycategoryId($conn, $jobRoleId){
 	$sql = "DELETE FROM job_title WHERE job_category_id = '$jobRoleId'";
 	if($result = $conn->query($sql)) {
 		return TRUE;
@@ -21,4 +21,15 @@ function delete_jobTitle($conn, $jobRoleId){
 
 }
 
+function delete_jobTitle($conn, $jobRoleId){
+	$sql = "DELETE FROM job_title WHERE job_title_id = '$jobRoleId' LIMIT 1";
+	if($result = $conn->query($sql)) {
+		return TRUE;
+	} else {
+		return $conn->error;
+	}
+
+}
+
 ?>
+
