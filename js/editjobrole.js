@@ -42,6 +42,7 @@ $(document).ready(function(){
 					$('#jobTitleModal').append(modalHTML1);	  		
 		  			
 		  			var html = '<hr><a data-toggle="modal" id=role'+(i+1)+' data-target="#myModal'+(i+1)+'" type="button"><i class="fa fa-pencil-square-o "></i> Edit</a>';
+		  				html += '<br><a data-toggle="modal" id=role'+(i+1)+' data-target="#myModal'+(i+1)+'" type="button"><i class="fa fa-times" aria-hidden="true"></i> Delete</a>';
 		  				html += '<h4><span>Title: </span>'+data[i].job_title+'</h4>';
 		  				html += '<span style="text-decoration: underline;">Description </span><p>'+data[i].job_description+'</p>';
 					$("#jobviews").append(html);
