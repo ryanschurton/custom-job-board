@@ -1,5 +1,6 @@
 <?php
 $conn->select_db("careerboard");
+
 function get_company($conn) {
 
 	//query to return company information
