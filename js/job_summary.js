@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
 	$.ajax({
 		type: 'GET',
 		data: {stuff:"all"},

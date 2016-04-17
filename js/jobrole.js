@@ -1,15 +1,17 @@
 $(document).ready(function(){
-
+	//Ajax call to return all jobcategories / jobroles
 	$.ajax({
 		type: 'GET',
-		data: {stuff: "jobcategories"},
+		data: {stuff: "jobcategories"}, 
 		url: "controller/select.ctrl.php",
 	  	success: function(result) {
 	  		var data = JSON.parse(result);
 	  		for(var i = 0; i < data.length; i++) {
+	  			//return each job category / jobroles name
 	  			$("#jobstype").append('<option value='+ data[i].job_category_id +'>' + data[i].job_category_name + '</option>');
 	  		}
 	  		
+	  		//This loop will create a modal for each job category
 	  		for(var i = 0; i < data.length; i++) {
 	  			//Modal to edit a job role
 	  			var modalHTML = '<div id="myModal'+(i+1)+'" class="modal fade" role="dialog"><div class="modal-dialog">';
